@@ -8,6 +8,7 @@ import java.util.List;
 @Value
 public class Field {
     Integer id;
+    String name;
     Dimensions dimensions;
     Character[][] dotes;
     List<PlayersPrepositionInfo> playersPrepositions;
@@ -15,11 +16,13 @@ public class Field {
 
     public Field(
         final Integer id,
+        final String name,
         final Character[][] dotes,
         final List<PlayersPrepositionInfo> playersPrepositions,
         final String creator
     ) {
         this.id = id;
+        this.name = name;
         this.dotes = dotes;
         this.playersPrepositions = playersPrepositions;
         this.creator = creator;
