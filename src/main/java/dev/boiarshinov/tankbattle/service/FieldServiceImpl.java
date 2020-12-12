@@ -171,4 +171,13 @@ public class FieldServiceImpl implements FieldService {
             .sortedBy(Field::getId)
             .toList();
     }
+
+    @Override
+    public List<Field> findByPlayerCount(final Integer playerCount) {
+        return StreamEx.of(fields.values())
+            .filter(Objects::nonNull)
+            .filter(field -> field.forPlayersCount(playerCount))
+            .sortedBy(Field::getId)
+            .toList();
+    }
 }

@@ -29,6 +29,11 @@ public class Field {
         this.dimensions = Dimensions.of(dotes);
     }
 
+    public boolean forPlayersCount(final int count) {
+        return this.playersPrepositions.stream()
+            .anyMatch(preposition -> preposition.getPlayersCount() == count);
+    }
+
     @Value
     @Builder
     public static class Dimensions {
