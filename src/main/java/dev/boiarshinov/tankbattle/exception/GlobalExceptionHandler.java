@@ -12,4 +12,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleNotFoundException(NotFoundException exception) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("not found");
     }
+
+    @ExceptionHandler
+    public ResponseEntity<String> handleUnauthorizedException(UnauthorizedException exception) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Выйди и зайди нормально");
+    }
 }
