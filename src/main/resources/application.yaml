@@ -1,12 +1,3 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
-    driverClassName: org.postgresql.Driver
-  liquibase:
-    change-log: classpath:db/changelog/db.changelog-master.xml
-
 server:
   servlet:
     context-path: /tanks
